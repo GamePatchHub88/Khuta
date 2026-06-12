@@ -1,17 +1,17 @@
 @font-face {
-  font-family:"n" ;
+  font-family: "n";
   src: url(./fonts/Naskh.ttf);
 }
 @font-face {
-  font-family:"r" ;
+  font-family: "r";
   src: url(./fonts/Ruqaa.ttf);
 }
 @font-face {
-  font-family:"d" ;
+  font-family: "d";
   src: url(./fonts/d.ttf);
 }
 @font-face {
-  font-family:"s" ;
+  font-family: "s";
   src: url(./fonts/Thuluth.ttf);
 }
 
@@ -46,23 +46,41 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-html{
+html {
   scroll-padding-top: 8rem;
 }
-
 
 body {
   background-color: #0a3d2e;
   background-image:
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px),
-    repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px),
-    radial-gradient(circle at 50% 50%, rgba(212,175,55,0.15) 0%, transparent 60%);
-  background-size: 40px 40px, 40px 40px, 100% 100%;
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 2px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 2px,
+      transparent 20px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(212, 175, 55, 0.15) 0%,
+      transparent 60%
+    );
+  background-size:
+    40px 40px,
+    40px 40px,
+    100% 100%;
   display: grid;
   justify-items: center;
 }
 
-.container{
+.container {
   max-width: 1100px;
   width: 100%;
   display: flex;
@@ -71,7 +89,6 @@ body {
   text-align: center;
   gap: 9rem;
 }
-
 
 nav {
   z-index: 1;
@@ -123,10 +140,10 @@ nav ul li:hover {
 }
 
 nav ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
-  right: 0;    
+  right: 0;
   width: 0%;
   height: 2px;
   background: linear-gradient(to left, #00ffb3, #d4af37);
@@ -144,7 +161,9 @@ nav img {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(0, 255, 179, 0.4);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 nav img:hover {
@@ -152,23 +171,22 @@ nav img:hover {
   box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
 }
 
-
-.hero-frame{
+.hero-frame {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   color: #fff;
   line-height: 1.3;
 }
-header{
+header {
   animation: animee 1s 0.5s both;
 }
 @keyframes animee {
-  0%{
+  0% {
     transform: translateY(5rem);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
@@ -213,7 +231,6 @@ header{
   margin-top: 1rem;
 }
 
-
 .btn {
   display: inline-block;
   font-family: "n", sans-serif;
@@ -227,8 +244,11 @@ header{
   border: #00ffb3 solid 2px;
   box-shadow: 0 4px 15px rgba(0, 255, 179, 0.15);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-              color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .outline {
@@ -251,24 +271,24 @@ header{
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
-.section-head{
+.section-head {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.tag{
+.tag {
   font-family: "r";
   font-size: 2rem;
-  color: #d4af37;                   
+  color: #d4af37;
   position: relative;
   display: inline-block;
   padding-bottom: 0.6rem;
-  margin: 0 auto;                       
+  margin: 0 auto;
 }
 
 .tag::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -279,31 +299,31 @@ header{
   border-radius: 2px;
 }
 
-.section-head h2{
+.section-head h2 {
   font-family: "n";
   font-size: 3rem;
   color: #00ffb3;
 }
 
-.section-head p{
+.section-head p {
   font-size: 1.5rem;
   color: rgba(199, 199, 199, 0.863);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-#chapters{
+#chapters {
   display: grid;
   gap: 3rem;
   /* margin-top: 4rem; */
 }
 
-.chapters-grid{
+.chapters-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
 }
 
-.chapter-card{
+.chapter-card {
   background-color: #005d416a;
   padding: 1.2rem;
   border-radius: 1rem;
@@ -312,8 +332,11 @@ header{
   flex-direction: column;
   gap: 1rem;
   border: 1px solid transparent;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-              border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
 }
 
@@ -324,32 +347,33 @@ header{
   box-shadow: 0 8px 28px rgba(0, 255, 179, 0.12);
 }
 
-.chapter-card h3{
+.chapter-card h3 {
   color: #00ffb3;
   font-size: 2rem;
   font-family: "n";
 }
 
-.num{
+.num {
   font-family: "r";
   font-size: 1.5rem;
-  color: #d4af37;                 
+  color: #d4af37;
 }
 
-
-.read{
+.read {
   background-color: #ffc400ad;
   border-radius: 20px;
   padding: 0.5rem 1rem;
   display: inline-block;
-  align-self: flex-start;            
+  align-self: flex-start;
   font-size: 0.95rem;
-  transition: background-color 0.3s ease, letter-spacing 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    letter-spacing 0.3s ease;
 }
 
 .chapter-card:hover .read {
   background-color: #ffc400e0;
-  letter-spacing: 0.5px;              
+  letter-spacing: 0.5px;
 }
 
 #articles {
@@ -360,7 +384,11 @@ header{
 }
 
 .chapter-article {
-  background: linear-gradient(135deg, rgba(0, 182, 128, 0.10), rgba(0, 93, 65, 0.32));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 182, 128, 0.1),
+    rgba(0, 93, 65, 0.32)
+  );
   border: 1px solid rgba(0, 255, 179, 0.15);
   padding: 2.5rem;
   border-radius: 2rem;
@@ -369,12 +397,13 @@ header{
   gap: 1.2rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-
 .chapter-article::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -389,7 +418,6 @@ header{
   box-shadow: 0 12px 40px rgba(0, 255, 179, 0.08);
 }
 
-
 .badge {
   font-family: "r";
   font-size: 1.1rem;
@@ -403,7 +431,6 @@ header{
   letter-spacing: 0.5px;
 }
 
-
 .chapter-article h3 {
   font-family: "n";
   font-size: 3rem;
@@ -411,7 +438,6 @@ header{
   line-height: 1.2;
   margin: 0;
 }
-
 
 .meta-line {
   font-family: "r";
@@ -425,7 +451,7 @@ header{
 }
 
 .meta-line::before {
-  content: '📍';
+  content: "📍";
   font-size: 0.9rem;
 }
 
@@ -455,7 +481,7 @@ header{
 }
 
 .content blockquote::before {
-  content: '\201C';
+  content: "\201C";
   font-size: 4rem;
   color: rgba(212, 175, 55, 0.18);
   position: absolute;
@@ -465,7 +491,6 @@ header{
   line-height: 1;
   pointer-events: none;
 }
-
 
 .back-link {
   display: inline-flex;
@@ -479,7 +504,10 @@ header{
   padding: 0.4rem 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .back-link:hover {
@@ -487,12 +515,6 @@ header{
   border-color: rgba(0, 255, 179, 0.3);
   background-color: rgba(0, 255, 179, 0.05);
 }
-
-
-
-
-
-
 
 #companions {
   display: grid;
@@ -506,7 +528,11 @@ header{
 }
 
 .companion-tile {
-  background: linear-gradient(160deg, rgba(0, 182, 128, 0.08), rgba(0, 93, 65, 0.28));
+  background: linear-gradient(
+    160deg,
+    rgba(0, 182, 128, 0.08),
+    rgba(0, 93, 65, 0.28)
+  );
   border: 1px solid rgba(212, 175, 55, 0.18);
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
@@ -516,12 +542,15 @@ header{
   gap: 0.8rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: default;
 }
 
 .companion-tile::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -536,7 +565,9 @@ header{
 .companion-tile:hover {
   transform: translateY(-6px);
   border-color: rgba(212, 175, 55, 0.45);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), 0 0 20px rgba(212, 175, 55, 0.08);
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(212, 175, 55, 0.08);
 }
 
 .companion-tile:hover::before {
@@ -569,11 +600,11 @@ header{
   line-height: 1.9;
   margin-top: 0.3rem;
 }
-#about h2{
+#about h2 {
   font-family: "s";
   font-size: 3rem;
 }
-#about p{
+#about p {
   font-size: 3rem;
 }
 
@@ -586,30 +617,45 @@ header{
   display: flex;
   align-items: center;
   gap: 3.5rem;
-  background: linear-gradient(135deg, rgba(0, 182, 128, 0.07), rgba(0, 93, 65, 0.28));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 182, 128, 0.07),
+    rgba(0, 93, 65, 0.28)
+  );
   border: 1px solid rgba(0, 255, 179, 0.15);
   border-radius: 2rem;
   padding: 3rem 3.5rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   text-align: right;
 }
 
 .dev-card::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(to right, transparent, #d4af37, #00ffb3, #d4af37, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    #00ffb3,
+    #d4af37,
+    transparent
+  );
   opacity: 0.5;
 }
 
 .dev-card:hover {
   border-color: rgba(0, 255, 179, 0.28);
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 255, 179, 0.06);
+  box-shadow:
+    0 16px 50px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(0, 255, 179, 0.06);
 }
 
 /* الصورة */
@@ -640,7 +686,9 @@ header{
 }
 
 @keyframes spin-ring {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* المعلومات */
@@ -689,14 +737,16 @@ header{
 
 .stack-badge {
   font-size: 1rem;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   color: #00ffb3;
   background: rgba(0, 255, 179, 0.08);
   border: 1px solid rgba(0, 255, 179, 0.2);
   border-radius: 6px;
   padding: 0.3rem 0.9rem;
   direction: ltr;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .stack-badge:hover {
@@ -762,7 +812,7 @@ footer {
 }
 
 footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -805,8 +855,12 @@ footer .footer-tagline {
   background: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.55);
   font-size: 1.3rem;
-  transition: transform 0.3s ease, border-color 0.3s ease,
-              background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
   text-decoration: none;
 }
 
@@ -840,4 +894,156 @@ footer .footer-tagline {
   background: rgba(37, 211, 102, 0.12);
   color: #25d366;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+}
+
+/* ==========================================
+   شاشات التابلت والأجهزة المتوسطة (Max-width: 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+  .container {
+    gap: 6rem;
+    padding: 0 1.5rem;
+  }
+
+  nav {
+    width: 95%;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .chapters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .companions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 14rem;
+  }
+
+  .container {
+    gap: 4.5rem;
+  }
+
+  nav {
+    height: auto;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 1rem;
+    top: 0.5rem;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  nav img {
+    width: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-title span {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.6rem;
+  }
+
+  .section-head h2 {
+    font-size: 2.2rem;
+  }
+
+  .section-head p {
+    font-size: 1.1rem;
+  }
+
+  .chapter-article {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .chapter-article h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .content blockquote {
+    font-size: 1.3rem;
+  }
+
+  #about h2,
+  #about p {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  footer .brand {
+    font-size: 2.2rem;
+  }
+
+  footer .footer-tagline {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chapters-grid,
+  .companions {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  nav ul li {
+    padding-bottom: 2px;
+  }
 }
