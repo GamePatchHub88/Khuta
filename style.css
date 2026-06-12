@@ -34,7 +34,7 @@ h6 {
 /* ─── Body ─── */
 body {
   font-family: "Cairo", sans-serif;
-  color: #fff;
+  color: #000000;
   min-height: 100vh;
   padding: 40px 20px;
   -webkit-font-smoothing: antialiased;
