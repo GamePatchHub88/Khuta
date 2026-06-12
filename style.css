@@ -1,4 +1,9 @@
-/* ─── Reset ─── */
+@font-face {
+  font-family:"n" ;
+  src: url(./fonts/Naskh.ttf);
+}
+
+
 *,
 *::before,
 *::after {
@@ -33,13 +38,77 @@ h6 {
 
 /* ─── Body ─── */
 body {
-  font-family: "Cairo", sans-serif;
-  color: #000000;
-  min-height: 100vh;
-  padding: 40px 20px;
-  -webkit-font-smoothing: antialiased;
+  background-color: #0a3d2e;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px),
+    radial-gradient(circle at 50% 50%, rgba(212,175,55,0.15) 0%, transparent 60%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  display: flex;
+  justify-content: center;
 }
 
-h1{
-  text-align: center;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  height: 5rem;
+  margin: 1rem auto 0;
+  background: rgba(0, 255, 179, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 179, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 179, 0.25);
+  border-radius: 50px;
+  padding: 0 2rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "n", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #00ffb3;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffb3;
+  transition: width 0.4s ease-in-out;
+  border-radius: 2px;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+nav img {
+  width: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 255, 179, 0.4);
 }
