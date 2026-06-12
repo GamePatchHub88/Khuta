@@ -2,6 +2,18 @@
   font-family:"n" ;
   src: url(./fonts/Naskh.ttf);
 }
+@font-face {
+  font-family:"r" ;
+  src: url(./fonts/Ruqaa.ttf);
+}
+@font-face {
+  font-family:"d" ;
+  src: url(./fonts/d.ttf);
+}
+@font-face {
+  font-family:"s" ;
+  src: url(./fonts/Thuluth.ttf);
+}
 
 
 *,
@@ -35,6 +47,9 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+html{
+  scroll-padding-top: 8rem;
+}
 
 /* ─── Body ─── */
 body {
@@ -44,15 +59,25 @@ body {
     repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px),
     radial-gradient(circle at 50% 50%, rgba(212,175,55,0.15) 0%, transparent 60%);
   background-size: 40px 40px, 40px 40px, 100% 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.container{
+  max-width: 1100px;
+  width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 5rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   height: 5rem;
   margin: 1rem auto 0;
@@ -61,6 +86,8 @@ nav {
   border: 1px solid rgba(0, 255, 179, 0.3);
   box-shadow: 0 0 20px rgba(0, 255, 179, 0.25);
   border-radius: 50px;
+  position: sticky;
+  top: 1rem;
   padding: 0 2rem;
 }
 
@@ -111,4 +138,140 @@ nav img {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(0, 255, 179, 0.4);
+}
+.hero-frame{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #fff;
+  line-height: 1.3;
+}
+.eyebrow {
+  font-family: "r", serif;
+  font-size: 1.4rem;
+  color: #d4af37; /* لون ذهبي دافئ للعنوان الفرعي العلوي */
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  
+}
+
+.hero-title {
+  font-family: "s", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  display: block; /* النزول لسطر جديد بشكل منظم */
+  font-family: "d", sans-serif;
+  font-size: 3rem;
+  color: #00ffb3;
+  margin-top: 3rem;
+  font-weight: normal;
+}
+
+.hero-sub {
+  font-family: "n", sans-serif;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.75); 
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "n", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  background-color: rgba(0, 255, 179, 0.15); /* خلفية زجاجية خضراء ناعمة */
+  padding: 0.8rem 2.2rem; 
+  border: #00ffb3 solid 2px;
+  box-shadow: 0 4px 15px rgba(0, 255, 179, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* حركة سلسة في الدخول والخروج */
+}
+
+.outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+/* تأثيرات التحويم الاحترافية */
+.btn:hover {
+  transform: translateY(-4px) scale(1.03); /* ارتفاع خفيف للأعلى مع تكبير متزن */
+  background-color: #00ffb3;
+  color: #0a3d2e; /* قلب الألوان لجعل النص واضحاً عند التحويم */
+  box-shadow: 0 8px 25px rgba(0, 255, 179, 0.4);
+}
+
+.outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+.section-head{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tag{
+  font-family: "r";
+  font-size: 2rem;
+  color: white;
+}
+.section-head h2{
+  font-family: "n";
+  font-size: 3rem;
+  color: #00ffb3;
+}
+.section-head p{
+  font-size: 1.5rem;
+  color:rgba(199, 199, 199, 0.863);
+  font-family: 'Courier New', Courier, monospace;
+}
+#chapters{
+  display: grid;
+  gap: 3rem;
+}
+.chapters-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0.8rem;
+}
+.chapter-card{
+  background-color: #005d416a;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.read{
+  background-color: #ffc400ad;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+.chapter-card h3{
+  color: #00ffb3;
+  font-size: 2rem;
+  font-family: "n";
+}
+.num{
+  font-family: "r";
+  font-size: 1.5rem;
 }
