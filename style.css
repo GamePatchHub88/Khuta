@@ -1123,7 +1123,7 @@ footer .footer-tagline {
   }
 }
 .islamic-audio-container {
-  background: linear-gradient(135deg, #0f342e, #164a41); 
+  background: linear-gradient(135deg, #0f342e, #164a41);
   padding: 20px;
   border-radius: 2rem;
   border: 2px solid #f4d068;
@@ -1131,19 +1131,43 @@ footer .footer-tagline {
   text-align: center;
   max-width: 400px;
   margin: 20px auto;
-  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-family: "Tajawal", "Cairo", sans-serif;
 }
 
 .audio-title {
-  color: #f4d068; 
+  color: #f4d068;
   margin-bottom: 15px;
   font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-
 .custom-audio {
   width: 100%;
   border-radius: 2rem;
   outline: none;
+}
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ffb3;
+  color: #000;
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 99999 !important;
+}
+.scroll-top:hover {
+  background-color: #00cc8e;
+  transform: scale(1.1);
 }
