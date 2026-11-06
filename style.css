@@ -129,3 +129,53 @@ footer .brand{font-size:1.8rem;font-weight:700;color:var(--brand)}
   .dev-stack{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== تصميم الواجهة المطابق للصورة ===== */
+:root{--bg:#fbf6ea;--brand:#0b4a3b;--brand-d:#073a2e;--brand-soft:#e6f0e8;--gold:#c9a24b;--cream:#f8efdd}
+body{font-family:"Cairo",system-ui,sans-serif;background:var(--bg);overflow-x:hidden}
+body::before{display:none}
+.container{max-width:none;padding:0}
+section,footer,.battles-index{max-width:1160px;margin-inline:auto;padding-inline:20px}
+nav{position:fixed;top:1.3vw;left:7.5%;right:7.5%;margin:0;z-index:100;padding:10px 26px;background:rgba(255,252,246,.94);border:1px solid #efe4cc;border-radius:999px;box-shadow:0 6px 24px rgba(90,70,20,.12);flex-direction:row-reverse;justify-content:flex-end;gap:40px}
+nav img{height:54px;order:0;margin-inline-start:0;padding-inline-start:26px;border-inline-start:2px solid var(--gold);border-radius:0}
+.nav-links{gap:10px;margin-inline-start:auto}
+.nav-links a{color:var(--brand-d);font-weight:700;font-size:17px;padding:6px 18px}
+.nav-links a:hover{background:var(--brand-soft)}
+.hero-wrap{position:relative;background:linear-gradient(180deg,#f6ecd9,#fbf5e8 60%,#fbf6ea)}
+header{position:relative;padding:0;text-align:center;min-height:max(46.7vw,640px);overflow:hidden}
+.hero-art{position:absolute;max-width:none;pointer-events:none}
+.hero-art.l{left:0;top:9.7vw;width:29.6vw;min-width:230px;-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);mask-image:linear-gradient(90deg,#000 78%,transparent)}
+.hero-art.r{right:0;top:9.7vw;width:27.5vw;min-width:210px;-webkit-mask-image:linear-gradient(270deg,#000 78%,transparent);mask-image:linear-gradient(270deg,#000 78%,transparent)}
+.hero-art.c{right:0;top:0;width:7.3vw}
+.hero-wave{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.hero-frame{position:relative;z-index:2;max-width:760px;padding:9.5vw 16px 11vw}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 22px;background:#e9f2e6;color:var(--brand);border:2px solid #bcd9c2;border-radius:999px;font-size:15px;margin:0 0 14px}
+.eyebrow b{font-weight:700}
+.hero-title{display:flex;flex-direction:column;align-items:center;line-height:1}
+.hero-title em{font-style:normal;font-family:"Aref Ruqaa",serif;font-weight:700;font-size:clamp(5rem,12vw,9.5rem);color:var(--brand-d);line-height:1.1}
+.swoosh{width:min(300px,45vw);height:14px;margin-top:-6px}
+.hero-title span{margin-top:18px;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;color:var(--brand-d)}
+.orn{display:flex;align-items:center;gap:12px;margin:18px auto 14px;max-width:520px;color:var(--gold)}
+.orn i{flex:1;height:1.5px;background:var(--gold);opacity:.8}.orn b{font-size:20px}
+.hero-sub{max-width:700px;margin:0 auto;color:#3b4a43;font-size:1.05rem;line-height:2}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;border-radius:999px;background:linear-gradient(180deg,#0f5a47,#083d30);color:#fff;border:2px solid var(--gold);font-weight:700;font-size:17px;box-shadow:0 6px 18px rgba(8,61,48,.3)}
+.btn.outline{background:#fffdf8;color:var(--brand-d);border:2px solid #efdfb8;box-shadow:0 4px 14px rgba(120,90,20,.12)}
+.btn.outline svg{color:var(--gold)}
+.btn.outline:hover{border-color:var(--gold)}
+/* عناوين الأقسام */
+#chapters{padding-top:34px}
+.tag{display:inline-block;padding:7px 30px;background:#e9f2e6;color:var(--brand);border:1px solid #cfe0d0;border-radius:14px;font-weight:600;font-size:17px}
+.section-head h2{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--brand-d);font-weight:800;font-size:clamp(1.8rem,4.2vw,3rem);margin-top:14px}
+.section-head h2::before,.section-head h2::after{content:"";flex:1;max-width:120px;height:1.5px;background:var(--gold)}
+.section-head h2::after{box-shadow:none}
+.section-head{max-width:900px}
+.chapter-card,.companion-tile,.chapter-article{background:#fffdf8;border-color:#efe4cc}
+.chapter-card:hover,.companion-tile:hover{border-color:var(--gold)}
+@media(max-width:760px){
+ nav{left:3%;right:3%;top:10px;padding:8px 16px;flex-wrap:wrap;flex-direction:row}
+ nav img{height:42px;padding:0;border:0}
+ .hero-art.l{opacity:.35;top:90px}.hero-art.r{opacity:.35;top:90px}
+ .hero-frame{padding-top:110px}
+ .hero-wave{min-width:900px;left:50%;transform:translateX(-50%)}
+}
