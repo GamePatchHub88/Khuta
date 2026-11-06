@@ -2,6 +2,10 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="#f6f7f4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===================== أساسيات SEO ===================== -->
@@ -35,7 +39,7 @@
       content="رحلة كاملة عبر 22 فصلاً و11 غزوة من سيرة النبي محمد ﷺ، مرتبة زمنياً من المولد إلى الوفاة، مع تعريف بأبرز الصحابة والصحابيات رضي الله عنهم."
     />
     <meta property="og:url" content="https://khuta-psi.vercel.app/" />
-    <meta property="og:image" content="./الصور/khatti_logo.png" />
+    <meta property="og:image" content="./images/khatti_logo.png" />
     <meta property="og:image:alt" content="شعار منصة خُطي لسيرة النبي ﷺ" />
 
     <!-- ===================== Twitter Card ===================== -->
@@ -48,10 +52,10 @@
       name="twitter:description"
       content="منصة عربية لقراءة سيرة النبي محمد ﷺ والغزوات النبوية بترتيب زمني صحيح، مع تعريف بالصحابة الكرام."
     />
-    <meta name="twitter:image" content="./الصور/khatti_logo.png" />
+    <meta name="twitter:image" content="./images/khatti_logo.png" />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./الصور/khatti_logo.png" />
+    <link rel="icon" href="./images/khatti_logo.png" />
 
     <!-- ===================== JSON-LD Structured Data ===================== -->
     <script type="application/ld+json">
@@ -142,24 +146,11 @@
     </script>
   </head>
   <body>
-    <!-- زخرفة هندسية علوية -->
-    <div class="geometric-top" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path
-          d="M0,60 Q300,0 600,60 Q900,120 1200,60 L1200,0 L0,0 Z"
-          fill="rgba(212,175,55,0.06)"
-        />
-        <path
-          d="M0,80 Q300,20 600,80 Q900,140 1200,80 L1200,0 L0,0 Z"
-          fill="rgba(0,255,179,0.04)"
-        />
-      </svg>
-    </div>
 
     <div class="container">
       <nav>
         <img
-          src="./الصور/khatti_logo.png"
+          src="./images/khatti_logo.png"
           alt="شعار منصة خُطي - السيرة النبوية الشريفة"
         />
         <input type="checkbox" id="menu-check" class="menu-check" />
@@ -581,7 +572,7 @@
           </div>
           <div class="islamic-audio-container">
             <p class="audio-title">الاستماع إلى المقطع</p>
-            <audio src="./الأصوات/1.mp3" controls class="custom-audio"></audio>
+            <audio src="./audio/1.mp3" controls class="custom-audio"></audio>
           </div>
           <a href="#chapters" class="back-link">العودة إلى الفهرس ↑</a>
         </article>
@@ -626,7 +617,7 @@
           </div>
           <div class="islamic-audio-container">
             <p class="audio-title">الاستماع إلى المقطع</p>
-            <audio src="./الأصوات/2.mp3" controls class="custom-audio"></audio>
+            <audio src="./audio/2.mp3" controls class="custom-audio"></audio>
           </div>
           <a href="#chapters" class="back-link">العودة إلى الفهرس ↑</a>
         </article>
@@ -670,7 +661,7 @@
           </div>
           <div class="islamic-audio-container">
             <p class="audio-title">الاستماع إلى المقطع</p>
-            <audio src="./الأصوات/3.mp3" controls class="custom-audio"></audio>
+            <audio src="./audio/3.mp3" controls class="custom-audio"></audio>
           </div>
           <a href="#chapters" class="back-link">العودة إلى الفهرس ↑</a>
         </article>
@@ -720,7 +711,7 @@
           </div>
           <div class="islamic-audio-container">
             <p class="audio-title">الاستماع إلى المقطع</p>
-            <audio src="./الأصوات/4.mp3" controls class="custom-audio"></audio>
+            <audio src="./audio/4.mp3" controls class="custom-audio"></audio>
           </div>
           <a href="#chapters" class="back-link">العودة إلى الفهرس ↑</a>
         </article>
@@ -852,7 +843,7 @@
           </div>
           <div class="islamic-audio-container">
             <p class="audio-title">الاستماع إلى المقطع</p>
-            <audio src="./الأصوات/5.mp3" controls class="custom-audio"></audio>
+            <audio src="./audio/5.mp3" controls class="custom-audio"></audio>
           </div>
           <a href="#chapters" class="back-link">العودة إلى الفهرس ↑</a>
         </article>
@@ -1851,7 +1842,7 @@
         <div class="dev-card">
           <div class="dev-img-wrap">
             <img
-              src="./الصور/1.jpg"
+              src="./images/1.jpg"
               alt="محمد أحمد حلمي - مطوّر منصة خُطي للسيرة النبوية"
             />
             <div class="dev-img-ring"></div>
@@ -1956,5 +1947,32 @@
     >
       ↑
     </button>
+
+    <script>
+      // الصوتيات: إيقاف المقطع السابق عند تشغيل مقطع جديد + رسالة واضحة إن لم يوجد الملف
+      document.querySelectorAll("audio.custom-audio").forEach((a) => {
+        a.preload = "none";
+        a.addEventListener("play", () => {
+          document.querySelectorAll("audio.custom-audio").forEach((o) => o !== a && o.pause());
+        });
+        const fail = () => {
+          if (a.dataset.failed) return;
+          a.dataset.failed = "1";
+          const note = document.createElement("p");
+          note.className = "audio-missing";
+          note.textContent = "المقطع الصوتي غير متاح حالياً.";
+          a.replaceWith(note);
+        };
+        a.addEventListener("error", fail);
+        a.addEventListener("loadedmetadata", () => {});
+        const src = a.getAttribute("src");
+        if (src && src.startsWith("./")) {
+          fetch(src, { method: "HEAD" }).then((r) => { if (!r.ok) fail(); }).catch(fail);
+        }
+      });
+      // زر العودة للأعلى يظهر عند التمرير فقط
+      const topBtn = document.querySelector(".scroll-top");
+      addEventListener("scroll", () => topBtn.classList.toggle("show", scrollY > 600), { passive: true });
+    </script>
   </body>
 </html>
